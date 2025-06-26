@@ -1,0 +1,151 @@
+/* src/App.css - Located in collaborative-editor-final/client/src */
+
+/* Base Styles & Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to right, #ece9e6, #ffffff); /* Soft gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 30px; /* More space at the top */
+  color: #333; /* Default text color */
+}
+
+/* Main Container for the Editor */
+.container {
+  width: 100%;
+  max-width: 950px; /* Slightly wider */
+  margin: 20px;
+  padding: 30px; /* More internal padding */
+  background-color: #fff; /* White background for editor box */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Stronger, softer shadow */
+  display: flex;
+  flex-direction: column; /* Stack editor vertically */
+  min-height: 70vh; /* Ensure it takes up a good portion of the screen */
+}
+
+/* Editor Wrapper - holds Quill toolbar and content */
+.editor-wrapper {
+  margin-top: 20px;
+  flex-grow: 1; /* Allows the editor to fill available vertical space */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Quill Editor Toolbar Styling */
+.ql-toolbar.ql-snow {
+  border: 1px solid #e0e0e0; /* Lighter border for toolbar */
+  border-bottom: none; /* No bottom border to blend with content */
+  background-color: #f8f8f8; /* Very light grey for toolbar */
+  border-top-left-radius: 8px; /* Rounded top corners */
+  border-top-right-radius: 8px;
+  padding: 10px 15px; /* More padding inside toolbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow below toolbar */
+  display: flex;
+  flex-wrap: wrap; /* Allow toolbar items to wrap on smaller screens */
+  gap: 5px; /* Small gap between groups of buttons */
+}
+
+/* Styling for Quill's toolbar buttons/controls */
+.ql-toolbar.ql-snow .ql-formats {
+  margin-right: 15px; /* More spacing between format groups */
+  margin-bottom: 5px; /* For wrapping */
+}
+
+/* Styling for dropdowns (e.g., Font, Header) */
+.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+/* Quill Editor Content Area Styling */
+.ql-container.ql-snow {
+  border: 1px solid #e0e0e0; /* Lighter border for content area */
+  min-height: 500px; /* Increased minimum height for a better editing experience */
+  font-size: 16px;
+  line-height: 1.6; /* Slightly more relaxed line spacing */
+  padding: 20px; /* Add internal padding for content */
+  border-bottom-left-radius: 8px; /* Rounded bottom corners */
+  border-bottom-right-radius: 8px;
+  background-color: #fff; /* White background for content */
+  overflow-y: auto; /* Allow scrolling for long documents */
+}
+
+/* Placeholder text styling */
+.ql-editor.ql-blank::before {
+  color: #b0b0b0;
+  font-style: italic;
+}
+
+/* Focus state for the editor */
+.ql-container.ql-snow:focus-within {
+  border-color: #007bff; /* Highlight border on focus */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Subtle blue glow */
+}
+
+/* Customize active toolbar buttons/dropdowns */
+.ql-toolbar.ql-snow .ql-active .ql-stroke,
+.ql-toolbar.ql-snow .ql-active .ql-fill {
+  fill: #007bff; /* Blue for active icons */
+  stroke: #007bff;
+}
+
+/* Customize colors for text/background pickers (Quill's own styles will handle the palette) */
+/* This just ensures the active state reflects our theme */
+.ql-snow .ql-color-picker .ql-picker-item.ql-selected,
+.ql-snow .ql-background-picker .ql-picker-item.ql-selected {
+  border: 1px solid #007bff;
+}
+
+/* Add a title/header for the document (Optional, but makes it feel more complete) */
+.document-title {
+  text-align: center;
+  font-size: 2.2em;
+  color: #2c3e50; /* Darker blue-grey */
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+    padding: 20px;
+  }
+  .document-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 5px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  .ql-toolbar.ql-snow {
+    padding: 8px 10px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .ql-container.ql-snow {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 15px;
+    min-height: 400px;
+  }
+  .document-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+}
