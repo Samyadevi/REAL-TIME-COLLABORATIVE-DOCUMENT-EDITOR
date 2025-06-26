@@ -54,3 +54,8 @@ The development process involved navigating common hurdles associated with real-
 
 To overcome these obstacles and ensure a functional prototype, a strategic decision was made to pivot to a more straightforward yet highly effective Socket.IO and Mongoose architecture. This allowed for a direct focus on establishing foundational real-time communication and document persistence. Once the core functionality was stable, significant effort was dedicated to refining the user interface with custom CSS, introducing vibrant colors, improved typography, and responsive design elements to enhance the overall user experience.
 
+0UTPUT :
+
+![Image](https://github.com/user-attachments/assets/8b3a54e0-887f-4e65-8566-4fed3718c0a8)
+
+![Image](https://github.com/user-attachments/assets/c27c5079-157e-4893-a2f4-96b968afbe68)
