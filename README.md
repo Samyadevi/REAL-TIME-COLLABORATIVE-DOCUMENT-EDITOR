@@ -1,5 +1,18 @@
 # REAL-TIME-COLLABORATIVE-DOCUMENT-EDITOR
-DESCRIPTION:
+
+"COMPANY": CODTECH IT SOLUTIONS
+
+"NAME": BADA SAMYADEVI
+
+"INTERN ID": CT04DG512
+
+"DOMAIN": FULL STACK WEB DEVELOPMENT
+
+"DURATION": 4 WEEKS
+
+"MENTOR": NEELA SANTOSH
+
+DESCRIPTION :
 * Real-time Collaborative Document Editor
 This project presents a dynamic, real-time collaborative document editor, a web application designed to allow multiple users to simultaneously edit rich text documents. Changes made by any participant are instantly synchronized across all active views, providing a seamless and interactive co-editing experience. This full-stack application showcases the integration of modern web technologies to achieve robust real-time functionality.
 
